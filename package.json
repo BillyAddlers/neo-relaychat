@@ -1,0 +1,49 @@
+{
+  "name": "neo-relaychat",
+  "version": "1.0.0",
+  "description": "A relay-based chat using node.js socket.io transport protocol",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node dist",
+    "start:host": "node dist/server.js",
+    "dev": "tsx src/index.ts",
+    "dev:host": "tsx src/server.ts",
+    "build": "npm run lint && npm run compile",
+    "lint": "eslint . --ignore-path .gitignore --ext .ts",
+    "compile": "tsc --build tsconfig.json",
+    "test": "npm run dev:host"
+  },
+  "keywords": [
+    "Relay",
+    "Chat",
+    "Relaychat",
+    "Nodejs",
+    "Typescript",
+    "Console"
+  ],
+  "author": "riichi_rusdiana",
+  "license": "SEE LICENSE IN LICENSE",
+  "eslintConfig": {
+    "extends": "@billyaddlers/eslint-config/typescript",
+    "ignorePatterns": "dist/*"
+  },
+  "devDependencies": {
+    "@billyaddlers/eslint-config": "github:BillyAddlers/eslint-config",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.2",
+    "eslint": "^9.5.0",
+    "tsx": "^4.15.5",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=22.3.0",
+    "npm": ">=10.8.1"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5"
+  }
+}
